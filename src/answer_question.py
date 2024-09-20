@@ -30,6 +30,7 @@ def get_api_information(client: OpenAI, question: str, api_spec: str):
                 - Omit the apiKey in query_params and ticker_symbol in path params.
                 - Understand the question and tell me the date range I should filter the api output on, latest being today's date.
                 - Use query params to filter by date if api document allows for filtering on date.
+                - Use limit query param wherever possible to limit the data we pull from api, if its available in the documentation.
                 - Provide only the JSON output, without any additional explanations or text, in the following format:
                     {
                         "ticker_symbol": "",
